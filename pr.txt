@@ -18,7 +18,7 @@ Execucao:
 EX 2 
 
 1. Quantos processos (nível 3) e quais são (obtem uma lista em JSON; podes concatenar sublistas invocando várias queries), pertencentes à descendência da classe 750?
-
+Nao consegui forma de responder a isto com um pedido direto ao clav...
 
 2. Quantas entidades estão catalogadas?
 http://clav-api.di.uminho.pt/v2/entidades?token=
