@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    h1 Termos de indice: 
+
+    table.w3-table
+        tr 
+            th Termo
+            th Id Classe
+            th Titulo Classe
+        each i in indices 
+            tr 
+                td= i.termo
+                td
+                    a(href="/classes/"+i.idClasse)= i.idClasse
+                td
+                    a(href="/classes/"+i.idClasse)= i.tituloClasse
+
+
+    footer
+        address.w3-bottom.w3-padding.w3-black Gerado por Joel Martins
+            a.w3-margin-left(href='/') Home 🏠
+            a.w3-margin-left(href='#' onclick='window.history.go(-1)') Back ⬅
+
+
+    script(src="/javascripts/scripts.js")

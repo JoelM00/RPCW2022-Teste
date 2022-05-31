@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    h1= classe.titulo 
+
+    p Nivel:  <strong>#{classe.nivel}</strong>
+    p Descricao:  <strong>#{classe.descricao}</strong>
+    p Status:  <strong>#{classe.status}</strong>
+
+
+    if filhos.length > 0
+        h2 Descendencia
+        
+        table.w3-table
+            tr 
+                th Codigo
+                th Titulo
+            each f in filhos 
+                tr 
+                    td
+                        a(href="/classes/"+f.codigo)= f.codigo
+                    td= f.titulo
+    else 
+        h2 Nao tem descendentes
+
+
+    if classe.nivel == 3 && classe.termosInd.length > 0
+        h2 Termos de indice
+        
+        table.w3-table
+            tr 
+                th Termo
+            each t in classe.termosInd 
+                tr 
+                    td
+                        a(href="/indices")= t.termo
+    else if  classe.nivel == 3
+        h2 Nao tem nivel 3
+    else 
+        h2 Nao tem termos de indice
+
+    footer
+        address.w3-bottom.w3-padding.w3-black Gerado por Joel Martins
+            a.w3-margin-left(href='/') Home 🏠
+            a.w3-margin-left(href='#' onclick='window.history.go(-1)') Back ⬅
+
+    script(src="/javascripts/scripts.js")

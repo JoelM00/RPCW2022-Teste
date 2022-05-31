@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1 Casse: 
+    h2 Bem vindo a pagina da classe
+
+    table.w3-table
+        tr 
+            th Codigo
+            th Titulo
+        each c in classes 
+            tr(class="row" id=c.codigo) 
+                td= c.codigo
+                td= c.titulo
+
+    footer
+        address.w3-bottom.w3-padding.w3-black Gerado por Joel Martins
+            a.w3-margin-left(href='/') Home 🏠
+            a.w3-margin-left(href='#' onclick='window.history.go(-1)') Back ⬅
+
+    script(src="/javascripts/scripts.js")

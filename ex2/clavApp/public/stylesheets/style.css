@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+
+body {
+  background: #eee;
+  font-family: 'Roboto';
+  color: #444;
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+tr:hover {
+  background: lightgrey;
+}

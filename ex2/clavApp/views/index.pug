@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 Pagina inicial
+  p Bem vindo a pagina inicial da ClavApp
+
+  if !token
+    p Ainda nao tem token ativo... 
+      button(id="token") Obter um
+  
+
+  else 
+    p
+      a(href="classes") Classes
+    p 
+      a(href="indices") Termos de indice
+
+  footer 
+    address.w3-bottom.w3-padding.w3-black Gerado por Joel Martins
+      a.w3-margin-left(href='#' onclick='window.history.go(-1)') Back ⬅
+
+
+  script(src="/javascripts/scripts.js")

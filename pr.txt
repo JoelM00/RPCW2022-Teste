@@ -1,0 +1,34 @@
+EX 1
+
+1. Separar o dataset fornecido em 2 datasets, um para as ligacoes e outro para as cidades
+2. Transformar o dataset de cidades e ligacoes num array de objetos, para poder usar a flag --jsonArray
+
+3. Copiar os datasets para o docker
+docker cp cidades.json mongodocker:/tmp/cidades.json
+docker cp ligacoes.json mongodocker:/tmp/ligacoes.json
+
+4. Importar os datasets no mongodb
+docker exec mongodocker mongoimport -d MAPA2022 -c cidades --file ./tmp/cidades.json --jsonArray
+docker exec mongodocker mongoimport -d MAPA2022 -c ligacoes --file ./tmp/ligacoes.json --jsonArray
+
+Execucao:
+1. npm install 
+2. npm start
+
+EX 2 
+
+1. Quantos processos (nível 3) e quais são (obtem uma lista em JSON; podes concatenar sublistas invocando várias queries), pertencentes à descendência da classe 750?
+
+
+2. Quantas entidades estão catalogadas?
+http://clav-api.di.uminho.pt/v2/entidades?token=
+
+3. Quantos processos (classes de nível 3) se encontram na descendência de 750.20?
+http://clav-api.di.uminho.pt/v2/classes/c750.20/descendencia?token=
+
+4. Quantos processos (classes de nível 3) estão relacionados com 750.20.600?
+http://clav-api.di.uminho.pt/v2/classes/c750.20.600/procRel?token=
+
+Nota: 
+Na pagina das classes cada linha da tabela ativa um pedido get do lado do cliente, inves de usar simplemesmente um atributo a com href=...
+
